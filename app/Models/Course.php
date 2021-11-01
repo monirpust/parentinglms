@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * Class Course
  * @package App\Models
- * @version October 31, 2021, 7:42 pm UTC
+ * @version November 1, 2021, 9:20 am UTC
  *
  * @property string $title
  * @property string $slug
@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property number $price
  * @property string $course_image
  * @property string $start_date
+ * @property boolean $status
  */
 class Course extends Model
 {
@@ -42,7 +43,8 @@ class Course extends Model
         'teachers',
         'price',
         'course_image',
-        'start_date'
+        'start_date',
+        'status'
     ];
 
     /**
@@ -58,7 +60,8 @@ class Course extends Model
         'teachers' => 'string',
         'price' => 'decimal:2',
         'course_image' => 'string',
-        'start_date' => 'date'
+        'start_date' => 'date',
+        'status' => 'boolean'
     ];
 
     /**
@@ -74,6 +77,8 @@ class Course extends Model
         'price' => 'required|numeric',
         'course_image' => 'required|string|max:255',
         'start_date' => 'required',
+        'deleted_at' => 'nullable',
+        'status' => 'required|boolean',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];

@@ -17,7 +17,13 @@
             <td>{{ $lesson->slug }}</td>
             <td>{{ $lesson->lesson_image }}</td>
             <td>{{ $lesson->description }}</td>
-            <td>{{ $lesson->active }}</td>
+            <td>
+                @if($lesson->active == 1)
+                    <span class="text-success">Active</span>
+                @else
+                 <span class="text-danger">In-active</span>
+                @endif
+            </td>
                 <td width="120">
                     {!! Form::open(['route' => ['lessons.destroy', $lesson->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

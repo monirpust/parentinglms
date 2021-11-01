@@ -13,7 +13,13 @@
             <tr>
                 <td>{{ $test->title }}</td>
             <td>{{ $test->description }}</td>
-            <td>{{ $test->active }}</td>
+            <td>
+                @if($test->active == 1)
+                    <span class="text-success">Active</span>
+                @else
+                 <span class="text-danger">In-active</span>
+                @endif
+            </td>
                 <td width="120">
                     {!! Form::open(['route' => ['tests.destroy', $test->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

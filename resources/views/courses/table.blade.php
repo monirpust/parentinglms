@@ -9,6 +9,7 @@
         <th>Price</th>
         <th>Course Image</th>
         <th>Start Date</th>
+        <th>Status</th>
             <th colspan="3">Action</th>
         </tr>
         </thead>
@@ -22,6 +23,14 @@
             <td>{{ $course->price }}</td>
             <td>{{ $course->course_image }}</td>
             <td>{{ $course->start_date }}</td>
+            <td>
+                @if($course->status == 1)
+                    <span class="text-success">Active</span>
+                @else
+                 <span class="text-danger">In-active</span>
+                @endif
+
+            </td>
                 <td width="120">
                     {!! Form::open(['route' => ['courses.destroy', $course->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

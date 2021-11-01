@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class CourseRepository
  * @package App\Repositories
- * @version October 31, 2021, 7:42 pm UTC
+ * @version November 1, 2021, 9:20 am UTC
 */
 
 class CourseRepository extends BaseRepository
@@ -23,7 +23,8 @@ class CourseRepository extends BaseRepository
         'teachers',
         'price',
         'course_image',
-        'start_date'
+        'start_date',
+        'status'
     ];
 
     /**

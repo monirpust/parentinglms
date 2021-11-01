@@ -14,7 +14,7 @@ class CreateTableTeachers extends Migration
     public function up()
     {
         Schema::create('teachers', function (Blueprint $table) {
-            $table->id('teacher_id');
+            $table->id('id');
             $table->string('name');
             $table->string('image')->nullable();
             $table->string('gender');

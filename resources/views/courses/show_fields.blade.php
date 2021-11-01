@@ -40,3 +40,9 @@
     <p>{{ $course->start_date }}</p>
 </div>
 
+<!-- Status Field -->
+<div class="col-sm-12">
+    {!! Form::label('status', 'Status:') !!}
+    <p>{{ $course->status }}</p>
+</div>
+

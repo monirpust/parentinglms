@@ -29,6 +29,8 @@ class CourseFactory extends Factory
         'price' => $this->faker->word,
         'course_image' => $this->faker->word,
         'start_date' => $this->faker->word,
+        'deleted_at' => $this->faker->date('Y-m-d H:i:s'),
+        'status' => $this->faker->word,
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];
